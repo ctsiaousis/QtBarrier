@@ -43,3 +43,10 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
+
+For cases where threads end up calling slots on QObjects that live on the main thread, this implementation may be risky.
+For that usecase you can initialize `QtBarrier` with `strict = true` and rely on a separate `QEventLoop` object to have responsive UI.
+```cpp
+QtBarrier mBar(5, true);
+```
+
