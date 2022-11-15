@@ -10,9 +10,9 @@
 
 class BarrierData
 {
-    BarrierData(int count, bool strict) : count(count), strict(strict) {}
 public:
-
+    BarrierData(int count, bool strict) : count(count), strict(strict) {}
+    
     void wait() {
         mutex.lock();
         --count;
