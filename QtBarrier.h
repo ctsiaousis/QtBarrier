@@ -5,6 +5,7 @@
 #include <QThread>
 #include <QAtomicInt>
 #include <QMutexLocker>
+#include <QApplication>
 #include <QWaitCondition>
 
 
