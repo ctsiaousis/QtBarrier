@@ -30,7 +30,7 @@ We can create as many runnables as we like and wait for them to finish like so :
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QtBarrier mBar(5);
+    QtBarrier mBar(5); // 4 runnables + 1 main thread
 
     qDebug() << "About to initiate runnables" << QDateTime::currentDateTime();
     for(int i = 0; i < 4; i++) {
